@@ -36,7 +36,9 @@
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
     </properties>
 
-   <!-- <repositories>
+
+
+    <repositories>
         <repository>
             <id>alimaven</id>
             <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
@@ -53,6 +55,17 @@
             </snapshots>
         </repository>
 
+        <repository>
+         <id>elasticsearch-releases</id>
+         <url>https://artifacts.elastic.co/maven</url>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>false</enabled>
+         </snapshots>
+      </repository>
+
     </repositories>
 
     <pluginRepositories>
@@ -66,7 +79,7 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
-    </pluginRepositories>-->
+    </pluginRepositories>
 
     <build>
         <plugins>

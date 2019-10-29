@@ -348,11 +348,11 @@
         </dependency>
 
         <!--oracle-->
-        <!--<dependency>-->
-        <!--<groupId>com.oracle</groupId>-->
-        <!--<artifactId>ojdbc6</artifactId>-->
-        <!--<version>11.2.0.3</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>11.2.0.3</version>
+        </dependency>
 
         <!--clickhouse-->
         <!--<dependency>-->
@@ -383,11 +383,11 @@
         <!--</dependency>-->
 
         <!--mongodb-->
-        <!--<dependency>-->
-        <!--<groupId>org.mongodb</groupId>-->
-        <!--<artifactId>mongodb-driver</artifactId>-->
-        <!--<version>3.6.3</version>-->
-        <!--</dependency>-->
+        <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver</artifactId>
+        <version>3.6.3</version>
+        </dependency>
 
         <!--presto-->
         <!--<dependency>-->
