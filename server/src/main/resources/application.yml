@@ -13,6 +13,12 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 #  >>
+server:
+  protocol: http
+  address: 10.103.25.10
+  port: 8080
+  servlet:
+    context-path: /
 
 file:
   userfiles-path: ${DAVINCI3_HOME}/userfiles/
@@ -27,13 +33,46 @@ spring:
       max-request-size: 1024MB
       max-file-size: 1024MB
       enabled: true
+  ## mail is one of the important configuration of the application
+  ## mail config cannot be null or empty
+  ## some mailboxes need to be set separately password for the SMTP service)
+  mail:
+    host: smtp.qiye.163.com
+    port: 25
+    username: service@cs.sh.cn
+    password: ZGyt2015!mail
+    nickname: report
 
+    properties:
+      smtp:
+        starttls:
+          enable: true
+          required: true
+        auth: true
+      mail:
+        smtp:
+          ssl:
+            enable: false
+    ldap:
+    # urls:
+    # username:
+    # password:
+     base:
+       domainName: '@cs.sh.cn'    # domainName 指 企业邮箱后缀，如企业邮箱为：xxx@example.com, 这里值为 '@example.com'
   config:
     location: classpath:/
     additional-location: file:${DAVINCI3_HOME}/config/
     name: application
 
   datasource:
+    url: jdbc:mysql://mysql.gpayintra.com:3306/davinci?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    username: gpay
+    password: gpay@12345
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 2
+    min-idle: 1
+    max-wait: 60000
+    max-active: 10
     type: com.alibaba.druid.pool.DruidDataSource
     time-between-eviction-runs-millis: 30000
     min-evictable-idle-time-millis: 300000

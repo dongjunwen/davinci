@@ -44,8 +44,8 @@ import javax.validation.Valid;
 @Api(value = "/statistic", tags = "statistic", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 @ApiResponses(@ApiResponse(code = 404, message = "statistic not found"))
 @Slf4j
-@RestController
-@RequestMapping(value = Constants.BASE_API_PATH + "/statistic", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+//@RestController
+//@RequestMapping(value = Constants.BASE_API_PATH + "/statistic", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class StatisticController {
 
     @Autowired

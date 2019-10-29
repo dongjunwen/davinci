@@ -55,7 +55,7 @@ public class LdapServiceImpl implements LdapService {
     @Autowired
     private LdapTemplate ldapTemplate;
 
-    @Value("${spring.ldap.domainName}")
+    @Value("${spring.ldap.domainName:@cs.sh.cn}")
     private String ldapDomainName;
 
 
